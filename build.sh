@@ -24,3 +24,5 @@ FAVICON_B64=$(cat favicon.png | openssl base64 | tr -d '\n') && echo "Base64-enc
 sed -e "s/fovcalc.css/$CSS_FILENAME/;s/fovcalc.js/$JS_FILENAME/;s|favicon.png|data:image/png;base64,$FAVICON_B64|;s|http://localhost:9933||" src/fovcalc.html > docs/index.html &&
   echo Filenames replaced in docs/index.html
 
+cp src/md5unicode.js docs/
+cp src/*.svg docs/

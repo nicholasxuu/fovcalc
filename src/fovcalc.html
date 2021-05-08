@@ -58,81 +58,93 @@
         </p>
       </noscript>
 
-      <canvas id="fov-preview"></canvas>
+      <div class="double-side-view">
+        <div class="left-view">
+          <canvas id="fov-preview"></canvas>
+        </div>
 
-      <p class="caption">
-        Top view: horizontal FoV; side view: vertical FoV. Thick red bar
-        represents monitor.
-      </p>
+        <div class="right-view">
+          <p class="caption">
+            Top view: horizontal FoV; side view: vertical FoV. Thick red bar
+            represents monitor.
+          </p>
 
-      <form action="#" id="controls">
-        <fieldset>
-          <legend>Distance to screen</legend>
-          <div id="slider-distance"></div>
-          <input
-            type="number"
-            name="distance-n"
-            min="10"
-            max="200"
-            value="40"
-          />
-          <label
-            title="Switch between inches and centimetres"
-            class="unit-switch inch"
-            ><span class="unit-switch_slider"
-              ><span class="unit-switch_slider--thumb"></span></span
-            ><input type="checkbox" name="distance-inches" checked
-          /></label>
-        </fieldset>
+          <form action="#" id="controls">
+            <fieldset>
+              <legend>Distance to screen</legend>
+              <div id="slider-distance"></div>
+              <input
+                type="number"
+                name="distance-n"
+                min="10"
+                max="200"
+                value="40"
+              />
+              <label
+                title="Switch between inches and centimetres"
+                class="unit-switch inch"
+                ><span class="unit-switch_slider"
+                  ><span class="unit-switch_slider--thumb"></span></span
+                ><input type="checkbox" name="distance-inches" checked
+              /></label>
+            </fieldset>
 
-        <fieldset>
-          <legend>Screen size and shape</legend>
-          <div id="slider-size"></div>
-          <input type="number" name="size-n" min="10" max="200" value="24" />
-          <label
-            title="Switch between inches and centimetres"
-            class="unit-switch inch"
-            ><span class="unit-switch_slider"
-              ><span class="unit-switch_slider--thumb"></span></span
-            ><input type="checkbox" name="size-inches" checked
-          /></label>
+            <fieldset>
+              <legend>Screen size and shape</legend>
+              <div id="slider-size"></div>
+              <input
+                type="number"
+                name="size-n"
+                min="10"
+                max="200"
+                value="24"
+              />
+              <label
+                title="Switch between inches and centimetres"
+                class="unit-switch inch"
+                ><span class="unit-switch_slider"
+                  ><span class="unit-switch_slider--thumb"></span></span
+                ><input type="checkbox" name="size-inches" checked
+              /></label>
 
-          <p class="note">Note: screen size is measured diagonally.</p>
+              <p class="note">Note: screen size is measured diagonally.</p>
 
-          <label
-            >Aspect ratio
-            <select name="aspect-ratio">
-              <option value="16:9" selected>16:9</option>
-              <option value="16:10">16:10</option>
-              <option value="4:3">4:3</option>
-              <option value="21:9">21:9</option>
-              <option value="32:9">32:9</option>
-            </select>
-          </label>
-        </fieldset>
+              <label
+                >Aspect ratio
+                <select name="aspect-ratio">
+                  <option value="16:9" selected>16:9</option>
+                  <option value="16:10">16:10</option>
+                  <option value="4:3">4:3</option>
+                  <option value="21:9">21:9</option>
+                  <option value="32:9">32:9</option>
+                </select>
+              </label>
+            </fieldset>
 
-        <fieldset>
-          <label
-            >Monitor Count
-            <select name="monitor-count">
-              <option value="1">Single Screen</option>
-              <option value="3" selected="">Triple Screen</option>
-            </select>
-          </label>
-        </fieldset>
+            <fieldset>
+              <label
+                >Monitor Count
+                <select name="monitor-count">
+                  <option value="1">Single Screen</option>
+                  <option value="3" selected="">Triple Screen</option>
+                </select>
+              </label>
+            </fieldset>
 
-        <fieldset>
-          <legend>Triple Monitor Angle (if triple monitor enabled)</legend>
-          <div id="slider-triple-angle"></div>
-          <input
-            type="number"
-            name="triple-angle-n"
-            min="0"
-            max="90"
-            value="65"
-          />
-        </fieldset>
-      </form>
+            <fieldset>
+              <legend>Triple Monitor Angle (if triple monitor enabled)</legend>
+              <div id="slider-triple-angle"></div>
+              <input
+                type="number"
+                name="triple-angle-n"
+                min="0"
+                max="90"
+                value="65"
+              />
+            </fieldset>
+          </form>
+        </div>
+      </div>
 
       <p class="feedback-popper">
         <button type="button" id="leave-feedback">Leave feedback</button>
