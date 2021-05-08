@@ -713,7 +713,7 @@
       min: 10,
       max: 120,
       step: 1,
-      value: 40,
+      value: 70,
       el: document.querySelector('#slider-distance'),
     });
 
@@ -721,7 +721,7 @@
       min: 19,
       max: 100,
       step: 0.5,
-      value: 24,
+      value: 32,
       el: document.querySelector('#slider-size'),
     });
 
